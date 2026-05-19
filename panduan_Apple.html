@@ -1,124 +1,509 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <title>Connecting Your Device</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
-<link rel="stylesheet" href="style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <link rel="stylesheet" href="style.css" />
+
+  <style>
+
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background: #f4f4f4;
+    }
+
+    .navbar {
+      background: #0f172a;
+      color: white;
+      padding: 15px 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .logo {
+      font-size: 20px;
+      font-weight: bold;
+    }
+
+    .menu {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .menu a {
+      color: white;
+      text-decoration: none;
+      margin-left: 20px;
+      font-size: 15px;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: auto;
+      background: white;
+      padding: 30px;
+    }
+
+    .step {
+      background: #f8fafc;
+      padding: 15px;
+      border-radius: 10px;
+      margin-bottom: 20px;
+    }
+
+    img {
+      border-radius: 10px;
+      margin-top: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #0f172a;
+      color: white;
+      margin-top: 30px;
+    }
+
+    .lang-switch {
+      margin-left: 20px;
+    }
+
+    .lang-switch button {
+      padding: 8px 12px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      margin-left: 5px;
+      font-weight: bold;
+    }
+
+    .lang-switch button:hover {
+      opacity: 0.9;
+    }
+
+    @media(max-width:768px){
+
+      .navbar{
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .menu{
+        margin-top: 15px;
+      }
+
+      .menu a{
+        margin-left: 0;
+        margin-right: 15px;
+        margin-bottom: 10px;
+      }
+
+      .lang-switch{
+        margin-left: 0;
+      }
+
+    }
+
+  </style>
 </head>
 
 <body>
-    
 
 <header>
- 
- <div class="navbar">
-  <div class="logo">IT Division
+
+  <div class="navbar">
+
+    <div class="logo">
+      IT Division
+    </div>
+
+    <div class="menu">
+
+      <a href="index.html" id="navHome">
+        Home
+      </a>
+
+      <a href="polycom.html" id="navPolycom">
+        Poly Studio X50 User Guide
+      </a>
+
+      <a href="access_wifi.html" id="navWifi">
+        How to Connect to Wi-Fi
+      </a>
+
+      <span class="lang-switch">
+        <button onclick="setLanguage('en')">EN</button>
+        <button onclick="setLanguage('id')">ID</button>
+      </span>
+
+    </div>
+
   </div>
-  <div class="menu">
-     <a href="index.html">Home</a>
-    <a href="polycom.html">Polycom X50</a>
-    <a href="access_wifi.html">Wifi Access</a>
-    
-      </div>
-</div>
+
 </header>
 
 <div class="container">
 
-  <h1>How do I connect to a meeting room TV?</h1>
+  <h1 id="title">
+    How do I connect to a meeting room TV?
+  </h1>
 
-  <p>
+  <p id="intro">
     You can connect to the meeting room TV via AirPlay
   </p>
 
-  <h2>What do I need to check first?</h2>
+  <h2 id="checkTitle">
+    What do I need to check first?
+  </h2>
+
   <ul>
-    <li>Connect to one of the following Wi-Fi networks: <a href="access_wifi.html">Access Wifi</a></li>
-    <li>The device is already connected to the Wi-Fi network. Please make sure it is not connected to a VPN, as it will not be able to connect to the meeting room TV.</li>
-    <li>Ensure the meeting room system is turned on</li>
+
+    <li id="check1">
+      Connect to one of the following Wi-Fi networks:
+      <a href="access_wifi.html">How to Connect to Wi-Fi</a>
+    </li>
+
+    <li id="check2">
+     The device is already connected to the Wi-Fi network, Please make sure it is not connected to a VPN.
+    </li>
+
+    <li id="check3">
+      Ensure the meeting room system is turned on
+    </li>
+
   </ul>
 
- <h3>Connecting to the TV in a meeting room AirPlay Via MacBook</h3>
-  <h2>Steps to connect</h2>
+  <!-- MACBOOK -->
+
+  <h3 id="macTitle">
+    Connecting to the TV in a meeting room via AirPlay using MacBook
+  </h3>
+
+  <h2 id="stepsTitle1">
+    Steps to connect
+  </h2>
 
   <div class="step">
-    <strong>Step 1:</strong><br>
-    Click Control Center in the top-right corner.
+    <strong>Step 1:</strong><br />
+
+    <span id="macStep1">
+      Click Control Center in the top-right corner.
+    </span>
   </div>
 
   <div class="step">
-    <strong>Step 2:</strong><br>
-    <p>Select Screen Mirroring.</p>
-    <p> <img src="img/1panduan-1.png" class="rounded-xl mb-4 shadow" style="width: 80%; max-width: 500px;"</p>
-  </div>
+    <strong>Step 2:</strong><br />
 
-  <div class="step">
-    <strong>Step 3:</strong><br>
-    Select <b>"Choose the device named TV (SBR-SmartTV)"</b>
-  </p>
-  </div>
+    <span id="macStep2">
+      Select Screen Mirroring.
+    </span>
 
-  <div class="step">
-    <strong>Step 4:</strong><br>
-    Enter the AirPlay code for verification; the passcode will appear on the TV screen
-    <p> <img src="img/1panduan-2.png" class="rounded-xl mb-4 shadow" style="width: 80%; max-width: 500px;"</p>
-  </div>
-
-  <div class="step">
-    <strong>Step 5:</strong><br>
-    Your screen will be displayed on the TV
+    <p>
+      <img src="img/1panduan-1.png"
+           style="width:80%; max-width:500px;" />
     </p>
   </div>
-  
-<h3>Connecting to the TV in a meeting room AirPlay Via iPad Or iPhone</h3>
-  <h2>Steps to connect</h2>
 
   <div class="step">
-    <strong>Step 1:</strong><br>
-    Swipe down from the top-right corner of the screen to access Control Center
+    <strong>Step 3:</strong><br />
+
+    <span id="macStep3">
+      Choose the device named TV (SBR-SmartTV)
+    </span>
   </div>
 
   <div class="step">
-    <strong>Step 2:</strong><br>
-    <p>Select Screen Mirroring.</p>
-    <p> <img src="img/1panduan-3.png" class="rounded-xl mb-4 shadow" style="width: 80%; max-width: 500px;"</p>
-  </div>
+    <strong>Step 4:</strong><br />
 
-  <div class="step">
-    <strong>Step 3:</strong><br>
-    Select <b>"Choose the device named TV (SBR-SmartTV)"</b>
-    <p> <img src="img/1panduan-4.png" class="rounded-xl mb-4 shadow" style="width: 80%; max-width: 500px;"</p>
-  </p>
-  </div>
+    <span id="macStep4">
+      Enter the AirPlay verification code shown on the TV screen
+    </span>
 
-  <div class="step">
-    <strong>Step 4:</strong><br>
-    Enter the AirPlay code for verification; the passcode will appear on the TV screen
-    <p> <img src="img/1panduan-5.png" class="rounded-xl mb-4 shadow" style="width: 80%; max-width: 500px;"</p>
-  </div>
-
-  <div class="step">
-    <strong>Step 5:</strong><br>
-    Your screen will be displayed on the TV
+    <p>
+      <img src="img/1panduan-2.png"
+           style="width:80%; max-width:500px;" />
     </p>
   </div>
-  
 
+  <div class="step">
+    <strong>Step 5:</strong><br />
 
-  <h2>Tips</h2>
+    <span id="macStep5">
+      Your screen will be displayed on the TV
+    </span>
+  </div>
+
+  <!-- IOS -->
+
+  <h3 id="iosTitle">
+    Connecting to the TV in a meeting room via AirPlay using iPad or iPhone
+  </h3>
+
+  <h2 id="stepsTitle2">
+    Steps to connect
+  </h2>
+
+  <div class="step">
+    <strong>Step 1:</strong><br />
+
+    <span id="iosStep1">
+      Swipe down from the top-right corner to open Control Center
+    </span>
+  </div>
+
+  <div class="step">
+    <strong>Step 2:</strong><br />
+
+    <span id="iosStep2">
+      Select Screen Mirroring.
+    </span>
+
+    <p>
+      <img src="img/1panduan-3.png"
+           style="width:80%; max-width:500px;" />
+    </p>
+  </div>
+
+  <div class="step">
+    <strong>Step 3:</strong><br />
+
+    <span id="iosStep3">
+      Choose the device named TV (SBR-SmartTV)
+    </span>
+
+    <p>
+      <img src="img/1panduan-4.png"
+           style="width:80%; max-width:500px;" />
+    </p>
+  </div>
+
+  <div class="step">
+    <strong>Step 4:</strong><br />
+
+    <span id="iosStep4">
+      Enter the AirPlay verification code shown on the TV screen
+    </span>
+
+    <p>
+      <img src="img/1panduan-5.png"
+           style="width:80%; max-width:500px;" />
+    </p>
+  </div>
+
+  <div class="step">
+    <strong>Step 5:</strong><br />
+
+    <span id="iosStep5">
+      Your screen will be displayed on the TV
+    </span>
+  </div>
+
+  <!-- TIPS -->
+
+  <h2 id="tipsTitle">
+    Tips
+  </h2>
+
   <ul>
-    <li>If device not detected, try manual connection</li>
-    <li>Check network connection</li>
-    <li>Restart device if connection fails</li>
+
+   
+
+    <li id="tip1">
+      Check network connection
+    </li>
+
+    <li id="tip2">
+      Restart device if connection fails
+    </li>
+
   </ul>
 
 </div>
 
 <footer>
-  © 2026 
+  © 2026
 </footer>
 
+<script>
+
+function setLanguage(lang) {
+
+  const text = {
+
+    en: {
+
+      /* NAVBAR */
+      navHome: "Home",
+      navPolycom: "Poly Studio X50 User Guide",
+      navWifi: "How to Connect to Wi-Fi",
+
+      /* PAGE */
+      title: "How do I connect to a meeting room TV?",
+      intro: "You can connect to the meeting room TV via AirPlay",
+
+      checkTitle: "What do I need to check first?",
+
+      check1:
+      'Connect to one of the following Wi-Fi networks: <a href="access_wifi.html">Access Wifi</a>',
+
+      check2:
+      "The device is already connected to the Wi-Fi network. Please make sure it is not connected to a VPN.",
+
+      check3:
+      "Ensure the meeting room system is turned on",
+
+      /* MACBOOK */
+      macTitle:
+      "Connecting to the TV in a meeting room via AirPlay using MacBook",
+
+      stepsTitle1:
+      "Steps to connect",
+
+      macStep1:
+      "Click Control Center in the top-right corner.",
+
+      macStep2:
+      "Select Screen Mirroring.",
+
+      macStep3:
+      "Choose the device named TV (SBR-SmartTV)",
+
+      macStep4:
+      "Enter the AirPlay verification code shown on the TV screen",
+
+      macStep5:
+      "Your screen will be displayed on the TV",
+
+      /* IOS */
+      iosTitle:
+      "Connecting to the TV in a meeting room via AirPlay using iPad or iPhone",
+
+      stepsTitle2:
+      "Steps to connect",
+
+      iosStep1:
+      "Swipe down from the top-right corner to open Control Center",
+
+      iosStep2:
+      "Select Screen Mirroring.",
+
+      iosStep3:
+      "Choose the device named TV (SBR-SmartTV)",
+
+      iosStep4:
+      "Enter the AirPlay verification code shown on the TV screen",
+
+      iosStep5:
+      "Your screen will be displayed on the TV",
+
+      /* TIPS */
+      tipsTitle: "Tips",
+
+      
+      tip1:
+      "Check network connection",
+
+      tip2:
+      "Restart device if connection fails"
+    },
+
+    id: {
+
+      /* NAVBAR */
+      navHome: "Beranda",
+      navPolycom: "Panduan Pengguna Poly Studio X50",
+      navWifi: "Cara Menghubungkan ke Wi-Fi",
+
+      /* PAGE */
+      title: "Bagaimana cara menghubungkan ke TV ruang meeting?",
+
+      intro:
+      "Anda dapat menghubungkan perangkat ke TV ruang meeting melalui AirPlay",
+
+      checkTitle:
+      "Apa yang perlu diperiksa terlebih dahulu?",
+
+      check1:
+      'Hubungkan ke salah satu jaringan Wi-Fi berikut: <a href="access_wifi.html">Access Wifi</a>',
+
+      check2:
+      "Perangkat sudah terhubung ke jaringan Wi-Fi, Pastikan perangkat tidak terhubung ke VPN.",
+
+      check3:
+      "Pastikan semua perangkat sistem meeting room sudah menyala",
+
+      /* MACBOOK */
+      macTitle:
+      "Menghubungkan ke TV ruang meeting melalui AirPlay menggunakan MacBook",
+
+      stepsTitle1:
+      "Langkah-langkah koneksi",
+
+      macStep1:
+      "Klik Control Center di pojok kanan atas.",
+
+      macStep2:
+      "Pilih Screen Mirroring.",
+
+      macStep3:
+      "Pilih perangkat dengan nama TV (SBR-SmartTV)",
+
+      macStep4:
+      "Masukkan kode verifikasi AirPlay yang muncul di layar TV",
+
+      macStep5:
+      "Layar perangkat akan tampil di TV",
+
+      /* IOS */
+      iosTitle:
+      "Menghubungkan ke TV ruang meeting melalui AirPlay menggunakan iPad atau iPhone",
+
+      stepsTitle2:
+      "Langkah-langkah koneksi",
+
+      iosStep1:
+      "Geser layar dari kanan atas untuk membuka Control Center",
+
+      iosStep2:
+      "Pilih Screen Mirroring.",
+
+      iosStep3:
+      "Pilih perangkat dengan nama TV (SBR-SmartTV)",
+
+      iosStep4:
+      "Masukkan kode verifikasi AirPlay yang muncul di layar TV",
+
+      iosStep5:
+      "Layar perangkat akan tampil di TV",
+
+      /* TIPS */
+      tipsTitle:
+      "Tips",
+
+      
+
+      tip1:
+      "Periksa koneksi jaringan",
+
+      tip2:
+      "Restart perangkat jika koneksi gagal"
+    }
+  };
+
+  for (const key in text[lang]) {
+    document.getElementById(key).innerHTML = text[lang][key];
+  }
+
+}
+
+</script>
+
 </body>
-</html> 
+</html>
