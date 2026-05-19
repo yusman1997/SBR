@@ -2,115 +2,371 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Connecting Your Device</title>
+  <title>Access WiFi Guide</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
-<link rel="stylesheet" href="style.css">
+
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background: #f4f4f4;
+    }
+
+    .navbar {
+      background: #0f172a;
+      color: white;
+      padding: 15px 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .logo {
+      font-size: 20px;
+      font-weight: bold;
+    }
+
+    .menu {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .menu a {
+      color: white;
+      text-decoration: none;
+      margin-left: 20px;
+      font-size: 15px;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: auto;
+      background: white;
+      padding: 30px;
+    }
+
+    .step {
+      background: #f8fafc;
+      padding: 15px;
+      border-radius: 10px;
+      margin-bottom: 20px;
+    }
+
+    img {
+      border-radius: 10px;
+      margin-top: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #0f172a;
+      color: white;
+      margin-top: 30px;
+    }
+
+    .lang-switch {
+      margin-left: 20px;
+    }
+
+    .lang-switch button {
+      padding: 8px 12px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      margin-left: 5px;
+      font-weight: bold;
+    }
+
+    .lang-switch button:hover {
+      opacity: 0.9;
+    }
+
+    @media(max-width:768px){
+
+      .navbar{
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .menu{
+        margin-top: 15px;
+      }
+
+      .menu a{
+        margin-left: 0;
+        margin-right: 15px;
+        margin-bottom: 10px;
+      }
+
+      .lang-switch{
+        margin-left: 0;
+      }
+
+    }
+
+  </style>
+
 </head>
 
 <body>
-    
 
 <header>
- 
- <div class="navbar">
-  <div class="logo">IT Division
+
+  <div class="navbar">
+
+    <div class="logo">
+      IT Division
+    </div>
+
+    <div class="menu">
+
+      <a href="index.html" id="navHome">
+        Home
+      </a>
+
+      <a href="polycom.html" id="navPolycom">
+        Poly Studio X50 User Guide
+      </a>
+
+      <a href="access_wifi.html" id="navWifi">
+        How to Connect to Wi-Fi
+      </a>
+
+      <span class="lang-switch">
+        <button onclick="setLanguage('en')">EN</button>
+        <button onclick="setLanguage('id')">ID</button>
+      </span>
+
+    </div>
+
   </div>
-  <div class="menu">
-     <a href="index.html">Home</a>
-    <a href="polycom.html">Polycom X50</a>
-    <a href="access_wifi.html">Wifi Access</a>
-    
-      </div>
-</div>
+
 </header>
 
 <div class="container">
 
-  <h1>How do I connect my device to the Access Wifi?</h1>
-<p> <img src="img/Access Wifi.png" class="rounded-xl mb-4 shadow" style="width: 70%; max-width: 300px;"</p>
- <h2>Windows</h2>
- 
+  <h1 id="title">
+    How do I connect my device to the Access Wifi?
+  </h1>
+
+  <p>
+    <img src="img/Access Wifi.png"
+         style="width:70%; max-width:300px;">
+  </p>
+
+  <!-- WINDOWS -->
+  <h2>Windows</h2>
 
   <div class="step">
     <strong>Step 1:</strong><br>
-    Open the Wi-Fi settings on your device
+
+    <span id="win1">
+      Open the Wi-Fi settings on your device
+    </span>
   </div>
 
   <div class="step">
     <strong>Step 2:</strong><br>
-    <p>Click <b>Icon > </b></p>
-    <p> <img src="img/wifi1.png" class="rounded-xl mb-4 shadow" style="width: 80%; max-width: 500px;"</p>
+
+    <span id="win2">
+      Click Wi-Fi icon
+    </span>
+
+    <p>
+      <img src="img/wifi1.png"
+           style="width:80%; max-width:500px;">
+    </p>
   </div>
 
   <div class="step">
     <strong>Step 3:</strong><br>
-    select <b> Binus-Guest</b>, Click <b>Connect</b>
-    <p> <img src="img/wifi2.png" class="rounded-xl mb-4 shadow" style="width: 80%; max-width: 500px;"</p>
-  </p>
+
+    <span id="win3">
+      Select Binus-Guest and click Connect
+    </span>
+
+    <p>
+      <img src="img/wifi2.png"
+           style="width:80%; max-width:500px;">
+    </p>
   </div>
 
   <div class="step">
     <strong>Step 4:</strong><br>
-   <b>Input Password:</b>Please scan the barcode on the desk, <b>NEXT</b>
-    <p> <img src="img/wifi3.png" class="rounded-xl mb-4 shadow" style="width: 80%; max-width: 500px;"</p>
+
+    <span id="win4">
+      Input password by scanning the barcode on the desk, then click NEXT
+    </span>
+
+    <p>
+      <img src="img/wifi3.png"
+           style="width:80%; max-width:500px;">
+    </p>
   </div>
 
   <div class="step">
     <strong>Step 5:</strong><br>
-    Wait until the device is successfully connected to the Wi-Fi network
-    </p>
+
+    <span id="win5">
+      Wait until the device is successfully connected to the Wi-Fi network
+    </span>
   </div>
-  
-  
 
-
-
-<h2>macOS</h2>
- 
+  <!-- MACOS -->
+  <h2>macOS</h2>
 
   <div class="step">
     <strong>Step 1:</strong><br>
-    Open the Wi-Fi settings on your device, select <b>Binus-Guest
+
+    <span id="mac1">
+      Open Wi-Fi settings and select Binus-Guest
+    </span>
   </div>
 
   <div class="step">
     <strong>Step 2:</strong><br>
-    <p>Click <b>Join/Connect</b> </b></p>
-    <p> <img src="img/Macos_wifi.png" class="rounded-xl mb-4 shadow" style="width: 80%; max-width: 500px;"</p>
+
+    <span id="mac2">
+      Click Join/Connect
+    </span>
+
+    <p>
+      <img src="img/Macos_wifi.png"
+           style="width:80%; max-width:500px;">
+    </p>
   </div>
 
   <div class="step">
     <strong>Step 3:</strong><br>
-    <b>Input Password:</b>Please scan the barcode on the desk
-  
-  </p>
+
+    <span id="mac3">
+      Input password by scanning the barcode on the desk
+    </span>
   </div>
 
   <div class="step">
     <strong>Step 4:</strong><br>
-   Click <b>Join</b>
+
+    <span id="mac4">
+      Click Join
+    </span>
   </div>
 
   <div class="step">
     <strong>Step 5:</strong><br>
-    Wait until the device is successfully connected to the Wi-Fi network
-    </p>
+
+    <span id="mac5">
+      Wait until the device is successfully connected to the Wi-Fi network
+    </span>
   </div>
-  
-  <h2>Tips</h2>
+
+  <!-- TIPS -->
+  <h2 id="tipsTitle">
+    Tips
+  </h2>
+
   <ul>
-    <li>If device not detected, try manual connection</li>
-    <li>Check network connection</li>
-    <li>Restart device if connection fails</li>
+
+   
+
+    <li id="tip2">
+      Check network connection
+    </li>
+
+    <li id="tip3">
+      Restart device if connection fails
+    </li>
+
   </ul>
 
 </div>
 
-
 <footer>
-  © 2026 
+  © 2026
 </footer>
 
+<script>
+
+function setLanguage(lang) {
+
+  const text = {
+
+    en: {
+
+      /* NAVBAR */
+      navHome: "Home",
+      navPolycom: "Poly Studio X50 User Guide",
+      navWifi: "How to Connect to Wi-Fi",
+
+      /* PAGE */
+      title: "How do I connect my device to the Access Wifi?",
+
+      /* WINDOWS */
+      win1: "Open the Wi-Fi settings on your device",
+      win2: "Click Wi-Fi icon",
+      win3: "Select Binus-Guest and click Connect",
+      win4: "Input password by scanning the barcode on the desk, then click NEXT",
+      win5: "Wait until the device is successfully connected to the Wi-Fi network",
+
+      /* MACOS */
+      mac1: "Open Wi-Fi settings and select Binus-Guest",
+      mac2: "Click Join/Connect",
+      mac3: "Input password by scanning the barcode on the desk",
+      mac4: "Click Join",
+      mac5: "Wait until the device is successfully connected to the Wi-Fi network",
+
+      /* TIPS */
+      tipsTitle: "Tips",
+      tip2: "Check network connection",
+      tip3: "Restart device if connection fails"
+    },
+
+    id: {
+
+      /* NAVBAR */
+      navHome: "Beranda",
+      navPolycom: "Panduan Pengguna Poly Studio X50",
+      navWifi: "Cara Menghubungkan ke Wi-Fi",
+
+      /* PAGE */
+      title: "Bagaimana cara menghubungkan perangkat ke Access Wifi?",
+
+      /* WINDOWS */
+      win1: "Buka pengaturan Wi-Fi pada perangkat",
+      win2: "Klik ikon Wi-Fi",
+      win3: "Pilih Binus-Guest lalu klik Connect",
+      win4: "Masukkan password dengan scan barcode di meja lalu klik NEXT",
+      win5: "Tunggu hingga perangkat berhasil terhubung ke jaringan Wi-Fi",
+
+      /* MACOS */
+      mac1: "Buka pengaturan Wi-Fi lalu pilih Binus-Guest",
+      mac2: "Klik Join/Connect",
+      mac3: "Masukkan password dengan scan barcode di meja",
+      mac4: "Klik Join",
+      mac5: "Tunggu hingga perangkat berhasil terhubung ke jaringan Wi-Fi",
+
+      /* TIPS */
+      tipsTitle: "Tips",
+      
+      tip2: "Periksa koneksi jaringan",
+      tip3: "Restart perangkat jika koneksi gagal"
+    }
+  };
+
+  for (const key in text[lang]) {
+    document.getElementById(key).innerHTML = text[lang][key];
+  }
+
+}
+
+</script>
+
 </body>
-</html> 
+</html>
