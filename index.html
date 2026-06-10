@@ -5,7 +5,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>TV Screens</title>
+<title>Meeting Room Guide</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 
@@ -61,6 +61,15 @@ body{
 .header h1{
   color:#0f172a;
   font-size:32px;
+  margin-bottom:10px;
+}
+
+.section-desc{
+  color:#6b7280;
+  font-size:15px;
+  margin-top:0;
+  margin-bottom:25px;
+  line-height:1.6;
 }
 
 .article{
@@ -168,41 +177,50 @@ body{
 
   <!-- ONSITE -->
   <div class="header">
+
     <h1 id="onsiteTitle">
       Meeting Onsite
     </h1>
+
+    <p class="section-desc" id="onsiteDesc">
+      Choose this if you only want to show your screen to the people in the room (No video call).
+    </p>
+
   </div>
 
-  <!-- ARTICLE 1 -->
   <div class="article">
     <h2>
       <a href="panduan_Apple.html" id="article1">
-        How do I connect to a meeting room TV via Device MacBook, iPad, iPhone?
+        How do I project my Mac/iOS screen to the TV?
       </a>
     </h2>
   </div>
 
-  <!-- ARTICLE 2 -->
   <div class="article">
     <h2>
       <a href="panduan_windows.html" id="article2">
-        How do I connect to a meeting room TV via Device Windows?
+        How do I project my Windows laptop screen to the TV?
       </a>
     </h2>
   </div>
 
   <!-- HYBRID -->
   <div class="header">
+
     <h1 id="hybridTitle">
       Meeting Hybrid
     </h1>
+
+    <p class="section-desc" id="hybridDesc">
+      Choose this if you are hosting a video conference with remote participants using the room camera and mic.
+    </p>
+
   </div>
 
-  <!-- ARTICLE 3 -->
   <div class="article">
     <h2>
       <a href="polycom.html" id="article3">
-        How do I connect to a meeting room TV via Apps Zoom?
+        How to start a Hybrid Meeting (Zoom, Microsoft Teams, Google Meet) using Poly Studio?
       </a>
     </h2>
   </div>
@@ -222,19 +240,26 @@ function setLanguage(lang){
       navPolycom: "Poly Studio X50 User Guide",
       navWifi: "How to Connect to Wi-Fi",
 
-      /* SECTION */
+      /* ONSITE */
       onsiteTitle: "Meeting Onsite",
 
+      onsiteDesc:
+      "Choose this if you only want to show your screen to the people in the room (No video call).",
+
       article1:
-      "How do I connect to a meeting room TV via Device MacBook, iPad, iPhone?",
+      "How do I project my Mac/iOS screen to the TV?",
 
       article2:
-      "How do I connect to a meeting room TV via Device Windows?",
+      "How do I project my Windows laptop screen to the TV?",
 
+      /* HYBRID */
       hybridTitle: "Meeting Hybrid",
 
+      hybridDesc:
+      "Choose this if you are hosting a video conference with remote participants using the room camera and mic.",
+
       article3:
-      "How do I connect to a meeting room TV via Apps Zoom?"
+      "How do I connect to a Zoom meeting using Poly Studio X50?"
     },
 
     id: {
@@ -244,20 +269,28 @@ function setLanguage(lang){
       navPolycom: "Panduan Pengguna Poly Studio X50",
       navWifi: "Cara Menghubungkan ke Wi-Fi",
 
-      /* SECTION */
+      /* ONSITE */
       onsiteTitle: "Meeting Onsite",
 
+      onsiteDesc:
+      "Pilih opsi ini jika Anda hanya ingin menampilkan layar kepada peserta yang berada di dalam ruangan (tanpa video conference).",
+
       article1:
-      "Bagaimana cara menghubungkan perangkat MacBook, iPad, atau iPhone ke TV ruang meeting?",
+      "Bagaimana cara menampilkan layar MacBook, iPad, atau iPhone ke TV?",
 
       article2:
-      "Bagaimana cara menghubungkan perangkat Windows ke TV ruang meeting?",
+      "Bagaimana cara menampilkan layar laptop Windows ke TV?",
 
+      /* HYBRID */
       hybridTitle: "Meeting Hybrid",
 
+      hybridDesc:
+      "Pilih opsi ini jika Anda ingin mengadakan video conference dengan peserta yang berada di lokasi lain menggunakan kamera dan mikrofon yang tersedia di ruang meeting.",
+
       article3:
-      "Bagaimana cara menghubungkan TV ruang meeting melalui aplikasi Zoom?"
+      "Bagaimana cara bergabung ke meeting Zoom menggunakan Poly Studio X50?"
     }
+
   };
 
   for(const key in text[lang]){
